@@ -1,0 +1,6 @@
+BASE_PAGE = "https://stellarburgers.nomoreparties.site/"
+ORDER_HISTORY_URL = "https://stellarburgers.nomoreparties.site/account/order-history"
+LOGIN_URL = "https://stellarburgers.nomoreparties.site/login"
+LIST_ORDER_PAGE = "https://stellarburgers.nomoreparties.site/feed"
+CREATE_USER_URL = "https://stellarburgers.nomoreparties.site/api/auth/register"
+DELETE_USER_URL = "https://stellarburgers.nomoreparties.site/api/auth/user"
