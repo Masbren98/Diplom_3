@@ -71,16 +71,15 @@ class MainPage(BasePage):
         account_button = self.wait_and_find_element(locators.MainPageLocators.BUTTON_ACCOUNT)
         self.click_element(account_button)
 
-
     @allure.step('Клик по кнопке закрытия всплывающего окна')
     def click_order_card_x_button(self):
         x_button = self.wait_and_find_element(locators.MainPageLocators.CLOSE_WINDOW_BTN)
         self.click_element(x_button)
 
-
     @allure.step('Получение номер оформленного заказа')
     def get_new_order_number(self):
-        WebDriverWait(self.driver, 10).until(lambda driver: self.wait_and_find_element(locators.MainPageLocators.NUMBER_NEW_ORDER).text != '9999')
+        WebDriverWait(self.driver, 10).until(
+            lambda driver: self.wait_and_find_element(locators.MainPageLocators.NUMBER_NEW_ORDER).text != '9999')
         new_order_number_element = self.wait_and_find_element(locators.MainPageLocators.NUMBER_NEW_ORDER)
         new_order_number = new_order_number_element.text
         return int(new_order_number)
@@ -103,8 +102,6 @@ class MainPage(BasePage):
     def find_create_order_description(self):
         return self.wait_and_find_element(locators.MainPageLocators.CREATE_ORDER_DESCRIPTION)
 
-
     @allure.step('Сравнение URL текущей страницы с адресом страницы "Лента заказов"')
     def check_order_list_url(self):
         return self.driver.current_url == urls.LIST_ORDER_PAGE
-    

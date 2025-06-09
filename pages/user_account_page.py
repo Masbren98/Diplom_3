@@ -4,7 +4,7 @@ import allure
 import urls
 
 
-class PersonalAccountPage(BasePage):
+class UserAccountPage(BasePage):
     @allure.step('Ввод email')
     def set_email(self, email):
         input_email = self.wait_and_find_element(locators.UserAccountLocators.FIELD_EMAIL)

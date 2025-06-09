@@ -38,6 +38,7 @@ class UserAccountLocators:
     FIELD_EMAIL = (By.XPATH, "//input[@class='text input__textfield text_type_main-default'][1]")
     FIELD_PASSWORD = (By.XPATH, "//input[@name='Пароль']")
     ENTER_BUTTON = (By.XPATH, "//button[text()='Войти']")
+    EXIT_BUTTON = (By.XPATH, "//button[text()='Выход']")
     DESCRIPTION_ACCOUNT = (By.XPATH, "//p[text() = 'В этом разделе вы можете изменить свои персональные данные']")
     ORDER_HISTORY_BTN = (By.XPATH, "//a[text()='История заказов']")
     EXIT_BTN = (By.XPATH, "//button[text()='Выход']")
